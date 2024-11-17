@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Saver</title>
+  <style>
+    body {
+      width: 260px;
+      height: auto;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      background-color: #827db7;
+    }
+    body:hover{
+        background-color: #7f75e46a;
+        transition: background-color 0.2s ease-in-out;
+  
+    }
+    h3 {
+      margin-top: 0;
+    }
+    .saved-links {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .saved-links li {
+      margin-bottom: 10px;
+    }
+    .saved-links a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+    }
+    .saved-links a:hover {
+      color: #007bff;
+    }
+    #openWebPageBtn {
+      display: block;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    #openWebPageBtn:hover {
+      background-color: #0056b3;
+    }
+    form {
+      margin-top: 7px;
+      margin-right: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h3>Saved Links</h3>
+  <ul id="savedLinks" class="saved-links"></ul>
+
+  <!-- Form to Add New Link -->
+  <h4>Add New Link</h4>
+  <form id="addLinkForm">
+    <input type="url" id="linkInput" placeholder="Enter link URL" required>
+    <input type="text" id="titleInput" placeholder="Enter title" required>
+    <textarea id="descriptionInput" placeholder="Enter description (optional)"></textarea>
+    <button type="submit">Save Link</button>
+  </form>
+
+  <a id="openWebPageBtn" href="Link Saver.html" target="_blank">Open All Links</a>
+  <p>Created by <a href="https://aviral.code.blog/"><strong>Aviral</strong></a>
+
+  <script src="popup.js"></script>
+</body>
+</html>
